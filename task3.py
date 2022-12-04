@@ -26,7 +26,7 @@ def create_randname_file(annotation_name: str, dir_copy: str) -> None:
             shutil.copy(os.path.join(os.path.join("dataset", dataset_class), file_name),
                         os.path.join(dir_copy, f"{file_number[count]}.jpg"))
             with open(os.path.join(dir_copy, annotation_name), mode="a", encoding="UTF-16", newline='') as file:
-                file_writer = csv.writer(file, delimiter=",")
+                file_writer = csv.writer(file, delimiter="|")
                 file_writer.writerow([f"{file_number[count]}.jpg", dataset_class])
             count += 1
 
