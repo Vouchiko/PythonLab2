@@ -7,6 +7,6 @@ from task4 import get_element
 if __name__ == '__main__':
     run1('brown bear', 'annotation.csv')
     run2('dataset-copy', 'annotation.csv')
-    run3('annotation.csv', 'dataset2')
+    run3('annotation.csv', 'dataset_2')
     for i in get_element('polar bear'):
         print(i)
