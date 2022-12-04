@@ -1,6 +1,7 @@
 import os
 import csv
 
+
 class IteratorTask1:
     def __init__(self, path: str):
         self.file_names = os.listdir(os.path.join('dataset', path))
