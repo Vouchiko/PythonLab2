@@ -2,7 +2,8 @@ import os
 import csv
 
 
-class IteratorTask1:
+class Iterator1:
+    """Initializing class fields"""
     def __init__(self, path: str):
         self.file_names = os.listdir(os.path.join('dataset', path))
         self.counter = 0
@@ -17,7 +18,9 @@ class IteratorTask1:
             raise StopIteration
 
 
-class IteratorTask2:
+class Iterator2:
+    """Initialization of class fields. Checking for the presence of the class name in the
+    file name, if it is missing the file is deleted"""
     def __init__(self, class_name: str, path: str):
         self.file_names = os.listdir(os.path.join(path))
         for name in self.file_names:
@@ -36,7 +39,8 @@ class IteratorTask2:
             raise StopIteration
 
 
-class IteratorTask3:
+class Iterator3:
+    """Initialization of class fields. Reading elements from the csv file and writing them to the list"""
     def __init__(self, class_name: str, path: str, annotation_name: str):
         self.file_names = list()
         with open(os.path.join(path, annotation_name), encoding='UTF-16') as file:
